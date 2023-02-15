@@ -3,11 +3,9 @@ import './TextField.css';
 
 
 const TextField = (props) => {
-    const [valor, setValor] = useState('');
     
     const aoDigitar = (e) => {
-        setValor(e.target.value);
-        console.log(valor);
+        props.aoAlterado(e.target.value);
     }
 
     return (
@@ -19,7 +17,7 @@ const TextField = (props) => {
                 className="form-control border border-dark-subtle"
                 placeholder={props.placeholder}
                 required={props.obrigatorio}
-                value={valor}
+                value={props.valor}
             />
         </div>
                     

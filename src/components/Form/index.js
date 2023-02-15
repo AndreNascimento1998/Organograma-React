@@ -14,8 +14,9 @@ const Form = () => {
     
     const aoSalvar = (e) =>{
         e.preventDefault();
-        console.log('Deu')
+        console.log('Deu', nome, funcao);
     }
+
     return (
         <div className="row gx-0 mt-4 alinhamento margem">
             <div className="col-3">
@@ -26,19 +27,19 @@ const Form = () => {
                         label='Nome' 
                         placeholder='Phantom Assassin'
                         valor={nome}
-                        aoAlerado={() => setNome(valor)}
+                        aoAlterado={val => setNome(val)}
                     />
                     <TextField 
                         obrigatorio={true}
                         label='Função' 
                         placeholder='Hard Carry'
                         valor={funcao}
-                        aoAlterado={() => setFuncao(valor)}
+                        aoAlterado={valor => setFuncao(valor)}
                     />
                     <TextField 
                         label='Imagem'
                         valor={imagem}
-                        aoAlterado={() => setimagem(valor)}
+                        aoAlterado={valor => setImagem(valor)}
                     />
                     <DropDown obrigatorio={true} atributos={atributos} label='Atributos'/>
                     <Button> 
