@@ -1,0 +1,14 @@
+.alinhamento {
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    margin-top: 10px !important;
+}
+
+.font-label {
+    font-style: italic !important;
+}
+
+.form-floating>.form-control, .form-floating>.form-control-plaintext{
+    font: inherit !important;
+}
