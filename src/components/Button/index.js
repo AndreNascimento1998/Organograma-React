@@ -3,7 +3,7 @@ import './Button.css';
 const Button = (props) => {
     return (
         <div>
-            <button type='button' className="btn btn-primary mt-4">{props.texto}</button>
+            <button type='submit' className="btn btn-primary mt-4">{props.children}</button>
         </div>
     )
 }
