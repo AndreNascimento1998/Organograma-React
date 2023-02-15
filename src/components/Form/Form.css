@@ -1,0 +1,11 @@
+.alinhamento {
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    margin-top: 10px !important;
+    overflow-y: hidden !important;
+}
+
+.margem {
+    margin-bottom: 30px !important;
+}
