@@ -11,10 +11,11 @@ const Form = () => {
     const [nome, setNome] = useState('');
     const [funcao, setFuncao] = useState('');
     const [imagem, setImagem] = useState('');
-    
+    const [atributosValor, setAtributos] = useState('');
+
     const aoSalvar = (e) =>{
         e.preventDefault();
-        console.log('Deu', nome, funcao);
+        console.log('Deu', nome, funcao, atributosValor);
     }
 
     return (
@@ -24,7 +25,7 @@ const Form = () => {
                 <form onSubmit={aoSalvar} className="form-control border border-dark-subtle">
                     <TextField 
                         obrigatorio={true} 
-                        label='Nome' 
+                        label='Nome'
                         placeholder='Phantom Assassin'
                         valor={nome}
                         aoAlterado={val => setNome(val)}
@@ -41,7 +42,13 @@ const Form = () => {
                         valor={imagem}
                         aoAlterado={valor => setImagem(valor)}
                     />
-                    <DropDown obrigatorio={true} atributos={atributos} label='Atributos'/>
+                    <DropDown 
+                        aoAlterado={targetValueDaOutraPagina => setAtributos(targetValueDaOutraPagina)}
+                        valor={atributosValor}
+                        obrigatorio={true}
+                        atributos={atributos} 
+                        label='Atributos'
+                     />
                     <Button> 
                         Avançar
                     </Button>
