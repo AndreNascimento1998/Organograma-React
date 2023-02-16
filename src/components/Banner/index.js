@@ -4,7 +4,7 @@ function Banner () {
     return (
     <div className='card pad'>
         <img
-            src="/image/banner.jpg" 
+            src="./image/banner.jpg" 
             alt="Banner principal" 
             className='img-fluid banner '
          />

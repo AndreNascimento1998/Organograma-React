@@ -19,9 +19,7 @@ const TextField = (props) => {
                 required={props.obrigatorio}
                 value={props.valor}
             />
-        </div>
-                    
-                
+        </div>         
     )
 }
 
