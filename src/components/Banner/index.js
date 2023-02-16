@@ -2,7 +2,7 @@ import './Banner.css';
 
 function Banner () {
     return (
-    <div className='card'>
+    <div className='card pad'>
         <img
             src="/image/banner.jpg" 
             alt="Banner principal" 
@@ -11,8 +11,7 @@ function Banner () {
         <div className='card-img-overlay'>
             <div className='row cor banner'>
                 <div className='col letras'>
-                    <h1>Pessoas e times </h1>
-                    <p>orgazinados em um só lugar</p>
+                    <h3>Lista de Picks</h3>
                 </div>
             </div>
         </div>

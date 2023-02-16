@@ -5,7 +5,7 @@ import './Form.css';
 import { useState } from "react";
 
 
-const Form = () => {
+const Form = (props) => {
     const atributos = ['Strength', 'Agility', 'Inteligence'];
 
     const [nome, setNome] = useState('');
@@ -15,13 +15,18 @@ const Form = () => {
 
     const aoSalvar = (e) =>{
         e.preventDefault();
-        console.log('Deu', nome, funcao, atributosValor);
+        props.dadoNovo({
+            nome: nome,
+            funcao,
+            imagem,
+            atributosValor
+        })
     }
 
     return (
         <div className="row gx-0 mt-4 alinhamento margem">
             <div className="col-3">
-                <h3 className="mb-2">Preencha os campos</h3 >
+                <h3 className="mb-2 letra-titulo">Cadastre seus hérois</h3 >
                 <form onSubmit={aoSalvar} className="form-control border border-dark-subtle">
                     <TextField 
                         obrigatorio={true} 
@@ -40,6 +45,7 @@ const Form = () => {
                     <TextField 
                         label='Imagem'
                         valor={imagem}
+                        placeholder='http://...'
                         aoAlterado={valor => setImagem(valor)}
                     />
                     <DropDown 

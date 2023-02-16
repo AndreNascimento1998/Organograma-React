@@ -11,7 +11,7 @@ const Dropdown = (props) => {
                     className='form-select border border-dark-subtle'
                 >
                     {props.atributos.map( (atributo, index) => {
-                        return <option key={index}>{atributo}</option>
+                        return <option key={index}> {atributo}</option>
                     })}
                 </select>
         </div>
