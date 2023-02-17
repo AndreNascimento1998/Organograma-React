@@ -36,7 +36,7 @@ function App() {
                 atributos={dadosProps.map( (dado) => dado.nome)}
                 dadoNovo={valor => novosDadosRecebidos(valor)}
             />
-
+        
             {dadosProps.map( (dado, index) => {
                 return (
                     <div key={index}>
@@ -47,11 +47,10 @@ function App() {
                             corSecundaria={dado.corSecundaria}
                             cadatroHerois={dados}
                         />
-                        <p></p>
+                        <p/>
                     </ div>
                 )
             })}
-
         </div>
     );
 }
