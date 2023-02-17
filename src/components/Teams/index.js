@@ -14,11 +14,15 @@ const Teams = (props) => {
                 <div className='card text-center ' style={{backgroundColor: props.corPrimaria}}>
                     <h1 className='pb-2' style={{backgroundColor: props.corSecundaria}}>{props.nome}</h1>
                     <div className='row p-1 text-center borderN'>
-                        <div className='col-3 mt-2'>
-                            <div className='card border border-dark-subtle' style={{backgroundColor: props.corSecundaria}}>
-                                <CardTeams dadosHeroi={heroi} corH5={props.corPrimaria}/>
-                            </div>
-                        </div>
+                        {props.cadatroHerois.map( (cadastroHeroi) => {
+                            return(
+                                <div className='col-3 mt-2'>
+                                    <div className='card border border-dark-subtle' style={{backgroundColor: props.corSecundaria}}>
+                                        <CardTeams dadosHeroi={cadastroHeroi} corH5={props.corPrimaria}/>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div> 
                 </div>
             </div>

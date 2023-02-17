@@ -10,7 +10,7 @@ const Form = (props) => {
     const [nome, setNome] = useState('');
     const [funcao, setFuncao] = useState('');
     const [imagem, setImagem] = useState('');
-    const [atributosValor, setAtributos] = useState('');
+    const [atributosValor, setAtributos] = useState('Strenght');
 
     const aoSalvar = (e) =>{
         e.preventDefault();
@@ -48,6 +48,7 @@ const Form = (props) => {
                         aoAlterado={valor => setImagem(valor)}
                     />
                     <DropDown 
+                        
                         aoAlterado={targetValueDaOutraPagina => setAtributos(targetValueDaOutraPagina)}
                         valor={atributosValor}
                         obrigatorio={true}

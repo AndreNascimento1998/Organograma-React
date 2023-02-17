@@ -8,7 +8,7 @@ const Dropdown = (props) => {
            <label className='input-group-text border border-dark-subtle'>{props.label}</label>
                 <select 
                     value={props.valor} 
-                    onChange={e => props.aoAlterado(e.target.value)}
+                    onChange={e => props.aoAlterado(e.target.value) }
                     required={props.obrigatorio} 
                     className='form-select border border-dark-subtle'
                 >

@@ -26,6 +26,7 @@ function App() {
 
     const novosDadosRecebidos = (dado) => {
         setDados([...dados, dado])
+        console.log(dado)
     }
 
     return (
@@ -39,11 +40,12 @@ function App() {
             {dadosProps.map( (dado, index) => {
                 return (
                     <div key={index}>
-                        <Teams 
+                        <Teams
                             key={index} 
                             nome={dado.nome} 
                             corPrimaria={dado.corPrimaria} 
                             corSecundaria={dado.corSecundaria}
+                            cadatroHerois={dados}
                         />
                         <p></p>
                     </ div>
