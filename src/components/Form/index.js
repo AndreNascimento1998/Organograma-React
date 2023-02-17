@@ -20,6 +20,9 @@ const Form = (props) => {
             imagem,
             atributosValor
         })
+        setNome('');
+        setFuncao('');
+        setImagem('');
     }
 
     return (
