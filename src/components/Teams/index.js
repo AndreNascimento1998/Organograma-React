@@ -1,23 +1,22 @@
 import './Teams.css';
+import CardTeams from '../CardTeams';
 
-const Teams = () => {
+const Teams = (props) => {
+
+
     return (
-        <div className='row centro'>
-            <div className='col-9'>
-                <div className='card'>
-                    <h1>Agility</h1>
-                    <div className='row text-center'>
-                        
+        <div className='row centro gx-0'>
+            <div className='col-9 '>
+                <div className='card text-center ' style={{backgroundColor: props.corPrimaria}}>
+                    <h1>{props.nome}</h1>
+                    <div className='row p-1 text-center borderN'>
                         <div className='col-3'>
-                            <div className='card border border-dark'>
-                                <img height='150px' width='150px' src='./image/pa.png'/>
-                                    <h5>Pa</h5> 
-                                <div className="card-img-overlay">
-                                </div>
+                            <div className='card border border-dark' style={{backgroundColor: props.corSecundaria}}>
+                                <CardTeams corH5={props.corPrimaria}/>
                             </div>
                         </div>
-
-                    </div>
+                        
+                    </div> 
                 </div>
             </div>
         </div>

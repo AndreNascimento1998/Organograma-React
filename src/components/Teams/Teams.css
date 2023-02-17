@@ -1,9 +1,10 @@
 .centro {
     justify-content: center !important;
     align-items: center !important;
+    color: white;
 }
 
-.border {
+.borderN {
     border: none;
     padding: 0px;
 }

@@ -6,6 +6,24 @@ import Teams from './components/Teams';
 function App() {
     const [dados, setDados] = useState([]);
 
+    const dadosProps = [
+        {
+            nome: 'Strenght',
+            corPrimaria: '#941111',
+            corSecundaria: '#c74343',
+        },
+        {
+            nome: 'Agility',
+            corPrimaria:'#047208',
+            corSecundaria:'#6bd16b'
+        },
+        {
+            nome: 'Inteligence',
+            corPrimaria: '#05216e',
+            corSecundaria: '#3d5adf'
+        }
+    ]
+
     const novosDadosRecebidos = (dado) => {
         setDados([...dados, dado])
     }
@@ -13,8 +31,25 @@ function App() {
     return (
         <div className="App">
             <Banner />
-            <Form dadoNovo={valor => novosDadosRecebidos(valor)}/>
-            <Teams />
+            <Form 
+                atributos={dadosProps.map( (dado) => dado.nome)}
+                dadoNovo={valor => novosDadosRecebidos(valor)}
+            />
+
+            {dadosProps.map( (dado, index) => {
+                return (
+                    <div key={index}>
+                        <Teams 
+                            key={index} 
+                            nome={dado.nome} 
+                            corPrimaria={dado.corPrimaria} 
+                            corSecundaria={dado.corSecundaria}
+                        />
+                        <p></p>
+                    </ div>
+                )
+            })}
+
         </div>
     );
 }

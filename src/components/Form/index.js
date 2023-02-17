@@ -6,7 +6,6 @@ import { useState } from "react";
 
 
 const Form = (props) => {
-    const atributos = ['Strength', 'Agility', 'Inteligence'];
 
     const [nome, setNome] = useState('');
     const [funcao, setFuncao] = useState('');
@@ -52,7 +51,7 @@ const Form = (props) => {
                         aoAlterado={targetValueDaOutraPagina => setAtributos(targetValueDaOutraPagina)}
                         valor={atributosValor}
                         obrigatorio={true}
-                        atributos={atributos} 
+                        atributos={props.atributos} 
                         label='Atributos'
                      />
                     <Button> 
