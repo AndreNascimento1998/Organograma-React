@@ -45,7 +45,7 @@ function App() {
                             nome={dado.nome} 
                             corPrimaria={dado.corPrimaria} 
                             corSecundaria={dado.corSecundaria}
-                            cadatroHerois={dados}
+                            cadatroHerois={dados.filter( dadoFiltro => dadoFiltro.atributosValor == dado.nome)}
                         />
                         <p/>
                     </ div>
