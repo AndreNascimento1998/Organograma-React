@@ -26,7 +26,6 @@ function App() {
 
     const novosDadosRecebidos = (dado) => {
         setDados([...dados, dado])
-        console.log(dado)
     }
 
     return (
